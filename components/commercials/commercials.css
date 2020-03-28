@@ -1,0 +1,39 @@
+.events button {
+	background-color:#E4E6EB;
+	border-radius:10%;
+}
+.sticky img {
+	max-width:100%;
+	display:block;
+}
+.sticky h4 {
+	padding-bottom:7px;
+	margin-bottom:13px;
+	font-size:14px;
+	border-bottom:1px solid var(--blue);
+}
+.comercial {
+	font-size:16px;
+	text-align:center;
+	padding:20px;
+	background-color:#F0F2F5;
+}
+.comercial p{
+	padding:5px;
+}
+.comercial img{
+	display:block;
+	max-width: 100%;
+	max-height:200px;
+	margin:auto;
+}
+
+.titleCommercial{
+	font-size:14px;
+	
+}
+.aboutCommercial{
+	font-size:12px;
+	color:grey;
+	text-align:center;
+}

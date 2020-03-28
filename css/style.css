@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
+
+a {
+	text-decoration: none
+}
+
+ul, ol {
+	list-style-type: none;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 18px;
+}
+
+body {
+	font-family: 'Ubuntu', sans-serif;
+	background-color: #eaeaea;
+	color: #292f36;
+}
+
+.posts-page {
+	padding-top: 80px;
+}
+
+h2 {
+	margin-bottom: 30px;
+}
+
+
+input:focus, button:focus, textarea:focus {
+	outline: none;
+}
+
+
+/* variabile css */
+:root {
+	--blue: #4ecdc5;
+	--orange: #ff6b6b;
+	--dark: #292f36;
+}
+
+input, nav input, textarea {
+	display: block;
+	font-size: 1rem;
+	margin-bottom: 20px;
+	padding: 10px 15px;
+	border-radius: 10px;
+	border: unset;
+	background-color: #efefef;
+	width: 100%;
+}
+
+input[type="submit"] {
+	font-weight: 700;
+	width: auto;
+	background-color: #ff6b6b;
+	color: #fff;
+}

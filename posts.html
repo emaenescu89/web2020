@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+	<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/posts.css">
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+	<script src="https://kit.fontawesome.com/0b9bb96ec6.js" crossorigin="anonymous"></script>
+	<script defer type="text/javascript" src="./libraries/slick/slick.min.js"></script>
+  <script defer src="./js/posts.js"></script>
+
+  <!-- Events component -->
+  <link rel="stylesheet" href="components/events/events.css">
+  <script defer src="./components/events/events.js"></script>
+
+  <!-- Commercials component -->
+  <link rel="stylesheet" href="components/commercials/commercials.css">
+  <script defer src="./components/commercials/commercials.js"></script>
+
+  <!-- Clock component -->
+  <link rel="stylesheet" href="components/clock/clock.css">
+  <script defer src="./components/clock/clock.js"></script>
+
+  <!-- Spinner component -->
+  <link rel="stylesheet" href="components/spinner/spinner.css">
+  <script defer src="./components/spinner/spinner.js"></script>
+
+  <!-- Suggested friends component -->
+  <link rel="stylesheet" href="components/suggested-friends/suggested-friends.css">
+  <script defer src="./components/suggested-friends/suggested-friends.js"></script>
+</head>
+
+<body class="posts-page">
+	<!-- start spinner -->
+	<div class="spinner-container">
+		<div class="spinner">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<!-- end spinner -->
+
+	<!-- Clock-bar -->
+	<div id="clock-container">22:22:22</div>
+	<!-- end clock bar -->
+	
+	<nav>
+		<div class="container">
+			<div class="left">
+				<a href="posts.html">
+					<i class="fab fa-grav"></i>
+				</a>
+				<form action="" method="get">
+					<input type="search" q="term" placeholder="Search...">
+					<button type="submit">
+						<i class="fas fa-search"></i>
+					</button>
+				</form>
+			</div>
+			<div class="right">
+
+				<ul class="account">
+					<!-- clock icon -->
+					<li id="clock-icon"><i class="fas fa-clock"></i></a></li>
+					<!-- end icon clock -->
+					<li>
+						<a href="#">
+							<i class="fas fa-bell"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-user"></i>
+						</a>
+					</li>
+					<li class="comments">
+						<a href="#">
+							<i class="fas fa-comments"></i>
+						</a>
+
+						<span class="badge">2</span>
+
+						<ul class="dropdown">
+							<li>
+								<a href="#">
+									<i class="fas fa-comment"></i>
+									<span>
+										<b>Nume Prenume</b>
+										commented
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="index.html">
+									<i class="fas fa-comment"></i>
+									<span>
+										<b>Nume Prenume</b>
+										commented
+									</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-cog"></i>
+							<i class="fas fa-caret-down"></i>
+						</a>
+						<ul class="dropdown">
+							<li>
+								<a href="#">
+									<i class="fas fa-user-cog"></i>
+									<span>Account</span>
+								</a>
+							</li>
+							<li>
+								<a href="index.html">
+									<i class="fas fa-power-off"></i>
+									<span>Log out</span>
+								</a>
+							</li>
+						</ul>
+
+
+					</li>
+				</ul>
+
+
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<aside>
+			<div class="sticky">
+				<div class="profile">
+					<img src="img/profile.jpg" alt="Nume Prenume">
+					<h3>Nume Prenume</h3>
+					<span>Web Developer</span>
+				</div>
+
+				<div class="events">
+					<h4>Calendar</h4>
+				</div>
+			</div>
+
+
+		</aside>
+		<main>
+
+      <!-- start article -->
+      <article>
+      	<header>
+      		<img src="img/profile.jpg" alt="Nume Prenume">
+					<div>
+						<span>Nume Prenume</span>
+						<span>Web Developer</span>
+					</div>
+      	</header>
+				<div class="content">
+					<img src="http://placehold.it/800x300" alt="">
+				</div>
+				<footer>
+					<ul class="actions">
+						<li>
+							<a href="#">
+								<i class="far fa-heart"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fas fa-comment-medical"></i>
+								<!-- deschide input de comment -->
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fas fa-retweet"></i>
+							</a>
+						</li>
+					</ul>
+					<form>
+						<textarea placeholder="Say something..."></textarea>
+					</form>
+					<div class="comments">
+						<div class="single-comment">
+							<img src="img/profile.jpg" style="max-width: 100%;" alt="">
+							<p>Faina postarea</p>
+						</div>
+						<div class="single-comment">
+							<img src="img/profile.jpg" style="max-width: 100%;" alt="">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti accusamus voluptas neque repellendus numquam officiis nemo unde saepe, similique, ab earum possimus? Voluptate optio unde temporibus, placeat odit repudiandae explicabo!</p>
+						</div>
+					</div>
+				</footer>
+      </article>
+      <!-- end article -->
+      <!-- start article -->
+      <article>
+      	<header>
+      		<img src="img/profile.jpg" alt="Nume Prenume">
+					<div>
+						<span>Nume Prenume</span>
+						<span>Web Developer</span>
+					</div>
+      	</header>
+				<div class="content">
+					<p>Am fost in concediu</p>
+					<video controls autoplay muted>
+						<source src="video/video.mp4" type="video/mp4">
+					</video>
+				</div>
+				<footer>
+					<ul class="actions">
+						<li>
+							<a href="#">
+								<i class="far fa-heart"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fas fa-comment-medical"></i>
+								<!-- deschide input de comment -->
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fas fa-retweet"></i>
+							</a>
+						</li>
+					</ul>
+					<form>
+						<textarea placeholder="Say something..."></textarea>
+					</form>
+					<div class="comments">
+						<div class="single-comment">
+							<img src="img/profile.jpg" style="max-width: 100%;" alt="">
+							<p>Faina postarea</p>
+						</div>
+						<div class="single-comment">
+							<img src="img/profile.jpg" style="max-width: 100%;" alt="">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti accusamus voluptas neque repellendus numquam officiis nemo unde saepe, similique, ab earum possimus? Voluptate optio unde temporibus, placeat odit repudiandae explicabo!</p>
+						</div>
+					</div>
+				</footer>
+      </article>
+      <!-- end article -->
+      <!-- start article -->
+      <article>
+      	<header>
+      		<img src="img/profile.jpg" alt="Nume Prenume">
+					<div>
+						<span>Nume Prenume</span>
+						<span>Web Developer</span>
+					</div>
+      	</header>
+				<div class="content">
+					<p>Stie cineva de placehold.it ?</p>
+					<img src="http://placehold.it/800x300" alt="">
+				</div>
+				<footer>
+					<ul class="actions">
+						<li>
+							<a href="#">
+								<i class="far fa-heart"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fas fa-comment-medical"></i>
+								<!-- deschide input de comment -->
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fas fa-retweet"></i>
+							</a>
+						</li>
+					</ul>
+					<form>
+						<textarea placeholder="Say something..."></textarea>
+					</form>
+					<div class="comments">
+						<div class="single-comment">
+							<img src="img/profile.jpg" style="max-width: 100%;" alt="">
+							<p>Faina postarea</p>
+						</div>
+						<div class="single-comment">
+							<img src="img/profile.jpg" style="max-width: 100%;" alt="">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti accusamus voluptas neque repellendus numquam officiis nemo unde saepe, similique, ab earum possimus? Voluptate optio unde temporibus, placeat odit repudiandae explicabo!</p>
+						</div>
+					</div>
+				</footer>
+      </article>
+      <!-- end article -->
+      <!-- start article -->
+      <article>
+      	<header>
+      		<img src="img/profile.jpg" alt="Nume Prenume">
+					<div>
+						<span>Nume Prenume</span>
+						<span>Web Developer</span>
+					</div>
+      	</header>
+				<div class="content">
+					<img src="http://placehold.it/800x300" alt="">
+					<img src="http://placehold.it/800x300" alt="">
+					<img src="http://placehold.it/800x300" alt="">
+					<img src="http://placehold.it/800x300" alt="">
+				</div>
+				<footer>
+					<ul class="actions">
+						<li>
+							<a href="#">
+								<i class="far fa-heart"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fas fa-comment-medical"></i>
+								<!-- deschide input de comment -->
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fas fa-retweet"></i>
+							</a>
+						</li>
+					</ul>
+					<form>
+						<textarea placeholder="Say something..."></textarea>
+					</form>
+					<div class="comments">
+						<div class="single-comment">
+							<img src="img/profile.jpg" style="max-width: 100%;" alt="">
+							<p>Faina postarea</p>
+						</div>
+						<div class="single-comment">
+							<img src="img/profile.jpg" style="max-width: 100%;" alt="">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti accusamus voluptas neque repellendus numquam officiis nemo unde saepe, similique, ab earum possimus? Voluptate optio unde temporibus, placeat odit repudiandae explicabo!</p>
+						</div>
+					</div>
+				</footer>
+      </article>
+      <!-- end article -->
+
+		</main>
+		</main>
+		<aside class="oarecare">
+			<div class="sticky rightside">
+				<h4>Sponsored</h4>
+			</div>
+
+		</aside>
+	</div>
+
+
+
+</body>
+
+</html>

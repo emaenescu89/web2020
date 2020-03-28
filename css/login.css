@@ -1,0 +1,207 @@
+h2 {
+  margin-bottom: 30px;
+  color: #3E3D56;
+}
+h4 {
+  margin-bottom: 10px;
+  color: #0b6d8b;
+}
+
+input:focus, button:focus, textarea:focus {
+  
+  outline: none;
+}
+
+/*Variables CSS*/
+:root {
+  --blue:#4ecdc4;
+  --orange:#ff6b6b;
+  --dark:#292F36;
+}
+
+/* Login container  */
+.login {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.login > div {
+  width: 100%;
+  max-width: 380px;
+  z-index: 2;
+  position: relative;
+  right: 10%;
+}
+.login .bg {
+  width: 48vw;
+  position: relative;
+  right: 10%;
+  top: 5%;
+  z-index: 1;
+}
+/* Style the tab */
+.tab {
+  overflow: hidden;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: rgba(78,205,196,0.25);
+  color: #fff;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 1rem;
+  border-radius: 10px 10px 0 0; 
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #4ecdc4;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #4ecdc4;
+  color: #3E3D56;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 20px 15px;
+  border: 1px solid #4ecdc4;
+  border-radius: 0 10px 10px 10px;
+  background-color: #fff;
+}
+
+.login input, nav input, textarea {
+  display: inline-block;
+  font-size: 1rem;
+  margin-bottom:20px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border:2px solid #f0f0f0;
+  background-color: #efefef;
+  width: 100%;
+}
+/*Button from login and register form*/
+#btn.submit, #btn-register.submit{
+  display: inline-block;
+  font-size: 1rem;
+  margin-bottom:20px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  
+}
+
+input[type="submit"], .submit {
+  display: block;
+  font-weight: 700;
+  background-color: #4ECDC2;
+  color: #fff;
+  width: auto;
+}
+::placeholder{
+  color: rgba(25, 145, 135,0.50); 
+} 
+#bDay, ::placeholder{
+  color: rgba(25, 145, 135,0.50); 
+}
+/*All the error and succsess messages*/
+.form-control  {
+  position: relative;
+  margin-bottom: 14px;
+}
+.form-control.succsess input {
+  border-color: #2ecc71;
+}
+.form-control.error input {
+  border-color: #e74c3c;
+}
+.form-control i {
+  position:absolute;
+  top: 13px;
+  right: 10px;
+  visibility: hidden ;
+}
+
+.form-control.succsess i.fa-check-circle{
+  visibility: visible;
+  color: #2ecc71;
+}
+.form-control.error i.fa-exclamation-circle{
+  visibility: visible;
+  color: #e74c3c;
+}
+.form-control.error small{
+  visibility: visible;
+  color: #e74c3c;
+}
+.form-control small {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+
+/* toggle switch dark and light theme  */
+
+.checkbox1 {
+  position: relative;
+  top: 55px;
+  right: 5px;
+}
+html[data-theme='dark'] {
+  --bg: #333333;
+}
+body {
+  background-color: var(--bg);
+}
+input[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: #4ECDC2;
+  float: right;
+  border-radius: 100px;
+  position: relative;
+}
+label:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+label:active:after {
+  width: 45px;
+}
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+/* end of toggle switch */

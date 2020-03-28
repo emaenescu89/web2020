@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"  href="css/style.css">
+  <link rel="stylesheet"  href="css/login.css">
+
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+  <link rel="stylesheet"  href="jquery/jquery-ui.css">
+  <link rel="stylesheet"  href="jquery/jquery-ui.structure.css">
+  <link rel="stylesheet"  href="jquery/jquery-ui.theme.css">
+
+  
+</head>
+
+<body>
+  <div class="checkbox1">
+      <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label>
+  </div>
+<div class="login" id="drag">
+    <img src="img/login2.svg" class="bg" alt="">
+
+  <div>
+    
+<!-- Tab links -->
+  <div class="tab">
+    <button class="tablinks active" onclick="openCity(event, 'London')" id="loginTab">Login</button>
+    <button class="tablinks" onclick="openCity(event, 'Paris')" id="registerTab">Register</button>
+  </div>
+
+<!-- Tab content London -->
+
+  <div id="London" class="tabcontent" style="display: block;">
+    <h2>Log in</h2>
+      <form action="posts.html" method="post" name="login"  id="login-form">
+        <div class="form-control ">
+          <input type="email" name="email" placeholder="Email address:" id="email" >
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="form-control ">
+          <input type="password" name="password" placeholder="Password:" id="password" >
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+          <button type="submit" name="login" class="submit" id="btn">Log in</button>
+      </form>
+  </div>
+<!-- Tab content Paris -->
+
+  <div id="Paris" class="tabcontent">
+    <h2>Register</h2>
+      <form action="posts.html" method="post" name="register" id="register-form">
+        <div class="form-control ">
+          <input type="text" name="Fname" placeholder="First Name:" id="fName" >
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>  
+        <div class="form-control ">
+          <input type="text" name="Lname" placeholder="Last Name:" id="lName" >
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="form-control ">
+          <input type="date" name="birthday" placeholder="DD/MM/YYYY" id="bDay" >
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="form-control ">
+          <input type="email" name="email" placeholder="Email address:" id="register-email" >
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="form-control ">
+          <input type="password" name="pass" placeholder="Password:" id="register-password" >
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="form-control ">
+          <input type="password" name="pass" placeholder=" Repeat Password:" id="passwordCheck" >
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+          <button type="submit" id="btn-register" class="submit">Register</button>
+      </form>
+  </div>
+
+
+  </div>
+</div>
+
+<script src="https://kit.fontawesome.com/89eeb9a3fe.js" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="jquery/jquery-ui.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+</body>
+</html>

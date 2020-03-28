@@ -1,0 +1,41 @@
+.event {
+	background-color:#F0F2F5;
+	padding:10px;
+	border-bottom:1px solid #CED0D4;
+}
+.event img {
+	border-radius:10%;
+	margin-bottom:5px;
+}
+.event p{
+	padding:3px;
+}
+.dateEvent{
+	font-size:10px;
+	font-weight:bold;
+	color:red;
+}
+.nameEvent{
+	font-size:12px;
+	color:grey;
+	font-weight:bold;
+
+}
+.aboutEvent{
+	font-size:10px;
+	color:grey;
+}
+
+.fa-calendar-alt:before {
+	margin-right:5px;
+}
+.sticky img {
+	max-width:100%;
+	display:block;
+}
+.sticky h4 {
+	padding-bottom:7px;
+	margin-bottom:13px;
+	font-size:14px;
+	border-bottom:1px solid #CED0D4;
+}
