@@ -352,40 +352,14 @@ main{
 	font-size: 14px;
 	color: #b0b0b0;
 }
-.events a {
-	display: flex;
 
-}
-.events a .fas, .events a .far {
-	font-size: 20px;
-	display: block;
-	margin-right: 15px;
-	color:var(--orange);
-}
-
-.events div span:first-child {
-	font-size: 12px;
-	color:var(--dark);
-	display: block;
-}
-
-.events div span:last-child {
-	font-size: 10px;
-	color: #b0b0b0;
-	display: block;
-}
-.events {
-	margin-bottom: 30px;
-}
 .stickey h4 {
 	padding-bottom: 7px;
 	margin-bottom: 13px;
 	font-size: 14px;
 	border-bottom: 1px solid var(--blue);
 }
-.events li {
-	margin-bottom: 10px;
-}
+
 .stickey img {
 	max-width: 100%;
 	display: block;
