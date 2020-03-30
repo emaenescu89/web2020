@@ -2,7 +2,7 @@
 
 // Declarare variabile
 let comment =[];// creare array
-let count = 0;
+let countStatus = 0;
 
 //arrow function
 let render = data =>{
@@ -78,8 +78,8 @@ $('#containerStatus').on('click','.commentStatus',() => {// atasam click pe id
 // Event Delegation! Atunci cand introducem continut dinamic in html.
 $('#containerStatus').on('click','.emptyHeart',() => { 
     $('.emptyHeart i').removeClass('far').addClass('fas');
-    count++;
-    $('#count').html(+count);
+    countStatus++;
+    $('#count').html(+countStatus);
 })
 
 });// inchidere document.ready
