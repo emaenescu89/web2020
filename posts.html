@@ -36,6 +36,10 @@
   <!-- Suggested friends component -->
   <link rel="stylesheet" href="components/suggested-friends/suggested-friends.css">
   <script defer src="./components/suggested-friends/suggested-friends.js"></script>
+
+  <!-- Update status components -->
+  <link rel="stylesheet" href="components/update-status/newPost.css">
+  <script defer src="./components/update-status/newPost.js"></script>
 </head>
 
 <body class="posts-page">
@@ -48,6 +52,33 @@
 		</div>
 	</div>
 	<!-- end spinner -->
+
+	<!-- Modal Section -->
+<div class="bg-modal">
+    <div class="modal-content">
+      <div>
+          <img src='img/profile.jpg' alt='profile image'>
+          <span class="nameModal">Dave Chappelle</span>
+      </div>
+      <div class="close">+</div>
+        <div class="statusModal">
+            <textarea rows="5" col="30" id="bodyModal"  placeholder="What's on your mind,Chappelle?"></textarea>
+            <input type="button" id="addModal" value="Post"/>
+        </div>
+        <div class="modalIcons">
+          <div class="mIcon1">
+              <i class="fas fa-photo-video"><span> Photo/Video</span></i>
+          </div>
+          <div class="mIcon2">
+              <i class="fas fa-user-tag"><span> Tag friends</span></i>
+          </div>
+          <div class="mIcon3">
+              <i class="fas fa-map-marker-alt"><span> Check In</span></i>
+          </div>
+        </div>
+    </div>
+  </div>
+<!-- End of Modal Section -->
 
 	<!-- Clock-bar -->
 	<div id="clock-container">22:22:22</div>
@@ -158,6 +189,13 @@
 
       <!-- start article -->
       <article>
+		  <!-- Input Updat Status -->
+		  <div class="status">
+				<input type="search" id="bodyText"  placeholder="What's on your mind,Chappelle?"></input>
+				<input type="button" id="addComment" value="Post"/>
+				</div>
+			  <div id="containerStatus"></div>
+		  <!-- End Input Updat Status -->
       	<header>
       		<img src="img/profile.jpg" alt="Nume Prenume">
 					<div>
