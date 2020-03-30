@@ -62,8 +62,8 @@ $(document).ready(() => { // functia care face ca si codul din interior sa se ex
 // Modal Section 
 
 $('#bodyText').on("click",() => { // am pus click event pe id
-    $('.bg-modal').show();// am setat display flex pe elementul cu  clasa
-    $('this').hide();// am scuns This element. Se refera la elementul pe care punem eventul click.
+    $('.bg-modal').show();// aratam elementul cu clasa
+    $('#bodyText').hide();// am scuns elementul cu id
 });
 
 $('.close').on("click",() => { // am pus click event pe el cu clasa
