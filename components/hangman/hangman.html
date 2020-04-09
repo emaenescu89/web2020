@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- jQuery -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap 4 CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
+    <!-- Stylesheet Css -->
+    <link rel="stylesheet" href="./css/hangman.css">
+    <title>Hangman</title>
+</head>
+<body>
+    <!-- Preloder animation starts here -->
+    <div class="preload">
+        <img src="./img/airplane.png" alt="airplane" class="airplane">
+        <h3>Landing on the games page....</h3>
+        <img src="./img/cloud.png" alt="cloud1" class="cloud1">
+        <img src="./img/cloud.png" alt="cloud2" class="cloud2">
+        <img src="./img/cloud.png" alt="cloud3" class="cloud3">
+    </div>
+    <!-- Preloder animation Ends here -->
+
+<div class="container">
+        <h1>Op, op, op, op Oppa Hangman Style</h1>
+    <div class="float-right">Wrong Guesses: <span id="mistakes">0</span> of <span id="maxWrong"></span></div>
+    <div class="text-center">
+        <img id="hangmanPic" src="./img/0.png">
+        <p>Guess the Programing Language: </p>
+        <p id="wordSpotlight">The word to be guessed goes here </p>
+    <div id="keyboard"></div>
+        <button class="btn btn-info " onclick="reset()">Reset</button>
+    </div>  
+</div>
+
+ <script src="./js/hangman.js"></script>
+</body>
+</html>
