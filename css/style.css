@@ -53,7 +53,7 @@ input, nav input, textarea {
 	border-radius: 10px;
 	border: unset;
 	background-color: #efefef;
-	width: 100%;
+	/* width: 100%; */
 }
 
 input[type="submit"] {

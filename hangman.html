@@ -9,17 +9,17 @@
     <!-- Bootstrap 4 CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
     <!-- Stylesheet Css -->
-    <link rel="stylesheet" href="./css/hangman.css">
+    <link rel="stylesheet" href="./components/hangman/css/hangman.css">
     <title>Hangman</title>
 </head>
 <body>
     <!-- Preloder animation starts here -->
     <div class="preload">
-        <img src="./img/airplane.png" alt="airplane" class="airplane">
+        <img src="./components/hangman/img/airplane.png" alt="airplane" class="airplane">
         <h3>Landing on the games page....</h3>
-        <img src="./img/cloud.png" alt="cloud1" class="cloud1">
-        <img src="./img/cloud.png" alt="cloud2" class="cloud2">
-        <img src="./img/cloud.png" alt="cloud3" class="cloud3">
+        <img src="./components/hangman/img/cloud.png" alt="cloud1" class="cloud1">
+        <img src="./components/hangman/img/cloud.png" alt="cloud2" class="cloud2">
+        <img src="./components/hangman/img/cloud.png" alt="cloud3" class="cloud3">
     </div>
     <!-- Preloder animation Ends here -->
 
@@ -27,7 +27,7 @@
         <h1>Op, op, op, op Oppa Hangman Style</h1>
     <div class="float-right">Wrong Guesses: <span id="mistakes">0</span> of <span id="maxWrong"></span></div>
     <div class="text-center">
-        <img id="hangmanPic" src="./img/0.png">
+        <img id="hangmanPic" src="./components/hangman/img/0.png">
         <p>Guess the Programing Language: </p>
         <p id="wordSpotlight">The word to be guessed goes here </p>
     <div id="keyboard"></div>
@@ -35,6 +35,6 @@
     </div>  
 </div>
 
- <script src="./js/hangman.js"></script>
+ <script src="./components/hangman/js/hangman.js"></script>
 </body>
 </html>

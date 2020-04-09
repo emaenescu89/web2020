@@ -79,7 +79,7 @@ const programingLanguages =[
      // verifica daca jocul este castigat
     let checkIfGameWon = () => {
         if (wordStatus === answer) { 
-          let audio = new Audio('audio/op.mp3');
+          let audio = new Audio('components/hangman/audio/op.mp3');
           audio.play();
           document.getElementById('keyboard').innerHTML = 'You Won!!!';
         }
@@ -97,13 +97,13 @@ const programingLanguages =[
     document.getElementById('maxWrong').innerHTML = maxWrong;
 
       // schimba poza in functie de cate greseli sunt. Numele pozei este = cu numarul de greseli
-    let updateHangmanPicture = () => document.getElementById('hangmanPic').src =`./img/${mistakes}.png`;
+    let updateHangmanPicture = () => document.getElementById('hangmanPic').src =`./components/hangman/img/${mistakes}.png`;
 
     // functia care reseteaza jocul.
     let reset =() => {
         mistakes = 0; // seteaza pe 0 
         guessed = []; // seteaza array gol
-        document.getElementById('hangmanPic').src = './img/0.png'; // reseteaza poza de inceput
+        document.getElementById('hangmanPic').src = './components/hangman/img/0.png'; // reseteaza poza de inceput
       
         randomWord(); // apelam functia care va genera un nou cuvant la intamplare(random)
         guessedWord(); // apelam functia ca sa resetam cuvantul ce trebuie ghicit sa fie _ _ _ _ si nu a b c
