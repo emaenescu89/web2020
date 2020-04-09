@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Css Stylesheet -->
+    <link rel="stylesheet" href="./components/quizGame/css/quiz.css">
+    <!-- Script Js -->
+    <script defer src="./components/quizGame/js/quiz.js"></script>
+    <title>QuizGame</title>
+</head>
+<body>
+    <!-- Preloader -->
+<div class="preloader-quiz">
+    <div class="blocks">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+    </div>
+    <p class="preload-text">...Loading</p>
+</div>
+<!-- End Preloader -->
+
+<div id="score">Your score is 0 !</div>
+    <div class="container">
+        <div id="question-container" class="hide">
+            <div id="question">Question</div>
+                <div id="answer-buttons" class="btn-grid">
+                     <button class="btn">Answer1</button>
+                     <button class="btn">Answer2</button>
+                     <button class="btn">Answer3</button>
+                     <button class="btn">Answer4</button>
+                </div>   
+        </div>
+        <div class="controls">
+            <button id="start-btn" class="start-btn btn">Start</button>
+            <button id="next-btn" class="next-btn btn hide">Next</button>
+            <button id="end-btn" class="start-btn btn hide">The End</button>
+        </div>
+    </div>
+    
+</body>
+</html>

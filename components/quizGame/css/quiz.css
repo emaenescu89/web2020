@@ -1,0 +1,135 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+:root{
+    --color-default: #004466;
+    --color-wrong: #660000;
+    --color-correct: #00662a;
+}
+body{
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-default);
+}
+body.correct{
+    background-color: var(--color-correct);
+}
+body.wrong{
+    background-color: var(--color-wrong);
+}
+/* Preloader Styles */
+.preloader-quiz {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: #171717;
+    transition: all 0.5s ease-out;
+}
+.preload-text{
+    color: #f3f3f3;
+    font-size: 28px;
+    font-weight: 300;
+}
+.blocks{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    animation: rotate 5s ease-in-out infinite;
+}
+.block {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: #ffce00;
+    transition: all 0.25s linear;
+}
+.block:nth-child(1){
+    top: 0;
+    left: 40px;
+}
+.block:nth-child(2){
+    top: 0;
+    left: 0;
+}
+.block:nth-child(3){
+    top: 40px;
+    left: 0;
+}
+@keyframes rotate {
+    0% {transform: rotate(0deg)}
+    100%{transform: rotate(360deg)}
+}
+/* End of Preloader Styles */
+#score {
+    font-size: 30px;
+    position: absolute;
+    background-color: yellow;
+    top: 10%;
+    color: #00662a;
+    padding: 0 5px;
+}
+.container{
+    width: 800px;
+    max-width: 85%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 0 10px 2px;
+}
+#question{
+    font-size: 25px;
+    color: var(--color-default);
+}
+.btn-grid{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 15px;
+    margin: 15px 0;
+}
+.btn{
+    border: 2px solid #006699;
+    background-color: #00aaff;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 5px 10px;
+    color: #ffffff;
+    outline: none;
+}
+.btn:hover{
+    border-color: #000000;
+    background-color: #0088cc;
+}
+.btn.correct{
+    background-color: var(--color-correct);
+    color: #000000;
+}
+.btn.wrong{
+    background-color: var(--color-wrong);
+}
+.start-btn, .next-btn{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hide{
+    display: none;
+}
