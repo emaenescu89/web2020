@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
-
 a {
-	text-decoration: none
+	text-decoration: none;
 }
 
 ul, ol {
@@ -21,7 +20,8 @@ html {
 body {
 	font-family: 'Ubuntu', sans-serif;
 	background-color: #eaeaea;
-	color: #292f36;
+	color: #292F36;
+	position: relative;
 }
 
 .posts-page {
@@ -30,22 +30,87 @@ body {
 
 h2 {
 	margin-bottom: 30px;
+
 }
 
-
 input:focus, button:focus, textarea:focus {
+	box-shadow: unset;
 	outline: none;
 }
 
-
-/* variabile css */
+/*Culori*/
 :root {
-	--blue: #4ecdc5;
-	--orange: #ff6b6b;
-	--dark: #292f36;
+	--blue: #4ECDC4;
+	--orange: #FF6B6B;
+	--dark: #292F36;
 }
 
-input, nav input, textarea {
+.login {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.login .bg {
+	width: 30vw;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	
+}
+
+.login > div {
+	width: 100%;
+	max-width: 380px;
+	position: relative;
+	z-index: 2;
+}
+
+/*login page*/
+
+/* Style the tab */
+.tab {
+	overflow: hidden;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+	background-color: rgba(78,205,196,0.5);
+	color: #ffffff;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+	font-size: 1rem;
+	border-radius: 10px 10px 0 0;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+	background-color: #4ECDC4;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+	background-color: #4ECDC4;
+	color:#ffffff;
+}
+
+/* Style the tab content */
+.tabcontent {
+	display: none;
+	padding: 20px 15px;
+	border-radius: 0 10px 10px 10px;
+	background-color: #ffffff;
+	border: 1px solid #4ECDC4;
+}
+
+.login input, nav input, textarea {
 	display: block;
 	font-size: 1rem;
 	margin-bottom: 20px;
@@ -58,7 +123,529 @@ input, nav input, textarea {
 
 input[type="submit"] {
 	font-weight: 700;
+	background-color: #FF6B6B;
+	color: #ffffff;
 	width: auto;
-	background-color: #ff6b6b;
+}
+
+/*Posts page*/
+
+nav {
+	background-color: var(--blue);
+	padding: 10px 15px;
+	box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 99999;
+}
+
+.container {
+	width: 100%;
+	max-width: 960px;
+	margin: auto;
+	/*margin-top 20px; marginul unui block in interiorul altui block, 
+	va trece peste parinte si in pagina pare ca parintele ar avea acest margin 
+	trecand peste background-color*/
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+}
+
+nav i {
+	color:#ffffff;
+	font-size: 40px;
+}
+
+.account > li {
+	display: inline-block;
+	position: relative;
+}
+
+.account .fas {
+	font-size: 20px;
+	padding: 10px;
+}
+
+.account .fa-caret-down {
+	font-size: 10px;
+	padding: 15px 0;
+	position: relative;
+	left: -5px;
+	top: -5px;
+	transition: transform .2s;
+}
+
+.dropdown {
+	padding: 10px;
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 100%;
+	width: 200px;
+	background-color: var(--blue);
+	box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.dropdown i {
+	display: inline-block;
+	width: 50px;
+}
+
+.account > li:hover .dropdown{
+	display: block;
+} 
+
+.account > li:hover .fa-caret-down{
+	transform: rotate(180deg);
+}
+
+.account a {
+	color: #ffffff;
+}
+
+nav input {
+	margin-bottom: 0;
+}
+
+
+/* navbar left part */
+nav .left {
+	display: inline-flex;
+}
+
+.left a {
+	display: inline-block;
+	margin-right: 15px;
+}
+
+.left button {
+	position: absolute;
+	right: 0;
+	top: 0;
+	border: unset;
+	background-color: transparent;
+}
+
+.left form {
+	position: relative;
+}
+
+.left .fas {
+	font-size: 20px;
+	padding: 10px;
+	color: var(--blue);
+}
+
+.comments .dropdown {
+	width: 320px;
+}
+
+.comments .dropdown span{
+	font-size: 12px;
+}
+
+.comments .dropdown a {
+	display: flex;
+	align-items: center;
+}
+
+.account .badge {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #ffffff;
+	background-color: var(--orange);
+	border: 1px solid #ffffff;
+	border-radius: 5px;
+	font-size: 8px;
+	padding: 2px 4px;
+}
+
+/*Aside left/right*/
+
+aside {
+	flex: 2;
+
+}
+
+aside .sticky {
+	position: sticky;
+	top: 80px;
+	border-radius: 10px;
+	background-color: #ffffff;
+	padding: 20px 10px;
+}
+
+main {
+	flex: 7;
+}
+
+.oarecare {
+	flex: 3;
+}
+
+.profile {
+	margin-bottom: 30px;
+}
+
+.profile img {
+	width: 80px;
+	display: block;
+	margin: 0 auto 20px;
+	border-radius: 50%;
+}
+
+.profile h3 {
+	font-size: 16px;
+	text-align: center;
+	color: var(--dark);
+}
+
+.profile span {
+	display: block;
+	text-align: center;
+	font-size: 14px;
+	color: #b0b0b0;
+}
+
+.events a {
+	display: flex;
+}
+
+.events a .fas, .events a .far {
+	font-size: 20px;
+	display: block;
+	margin-right: 15px;
+	color: var(--orange);
+}
+
+.events div span:first-child {
+	font-size: 12px;
+	color: var(--dark);
+	display: block;
+}
+
+.events div span:last-child {
+	font-size: 10px;
+	color: #b0b0b0;
+	display: block;
+}
+
+.events {
+	margin-bottom: 30px;
+}
+
+.events li {
+	margin-bottom: 10px;
+}
+
+.sticky h4 {
+	padding-bottom: 7px;
+	margin-bottom: 20px;
+	font-size: 14px;
+	border-bottom: 1px solid var(--blue);
+}
+
+.sticky img {
+	max-width: 100%;
+	display: block;
+}
+
+/*Posts*/
+
+article {
+	padding: 10px;
+	background-color: #ffffff;
+	border-radius: 10px;
+	margin:0 15px 10px;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	padding-bottom: 7px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid var(--blue);
+}
+
+header div span:first-child {
+	font-size: 14px;
+	color: var(--dark);
+	display: block;
+}
+
+header div span:last-child {
+	font-size: 12px;
+	color: #b0b0b0;
+	display: block;
+}
+
+header img {
+	width: 30px;
+	display: block;
+	margin-right: 15px;
+	border-radius: 50%;
+}
+
+.actions {
+	display: flex;
+}
+
+.actions li {
+	flex: 1;
+}
+
+.actions a {
+	display: block;
+	text-align: center;
+	color: var(--orange);
+	padding: 5px 0;
+}
+
+.actions a:hover {
+	background: linear-gradient(to bottom, transparent, rgba(255,107,107,0.15), transparent);
+}
+
+.single-comment {
+	display: flex;
+	padding: 5px;
+	border-bottom: 1px solid #eaeaea;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+.single-comment img {
+	width: 30px;
+	height: 30px;
+	margin-right: 15px;
+	border-radius: 50%;
+}
+
+.single-commnet p {
+	flex: 1;
+	color: #565656;
+	font-size: 14px;
+}
+
+.content * {
+	display: block;
+	max-width: 100%;
+	margin-bottom: 20px;
+}
+
+
+/* Css Task */
+
+/* spinner */
+.spinner-container {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	/* background-color: #4ECDC4; */
+	background-image: linear-gradient(135deg, #4ecdc4 0%, black 100%);
+	z-index: 100000;
+}
+
+.spinner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.spinner > span {
+	display: inline-block;
+	background-color: aquamarine;
+	width: 0;
+	height: 0;
+	border-radius: 50%;
+	margin: 0 8px;
+	animation: bounce 0.6s infinite alternate;
+	transform: translate3d(0);
+}
+
+.spinner > span:nth-child(2) {
+	background-color: darkturquoise;
+	animation-delay: 0.2s;
+}
+
+.spinner > span:nth-child(3) {
+	background-color: lightseagreen;
+	animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    to {
+        width: 16px;
+        height: 16px;
+        transform: translate3d(0, -16px, 0);
+    }
+}
+
+
+/* search */
+nav input:focus + .search-icon,
+nav input:hover + .search-icon,
+nav input:active + .search-icon {
+	display: none;
+}
+
+
+/* clock style */
+
+#clock-container {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	z-index: 1000;
+	padding:10px 30px;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(78, 205, 197, 0.534);
+	opacity: 3;
+	font-size: 1rem;
+	font-weight: 400;
+	font-family: 'Kelly Slab', cursive;
+	transform: translateY(100%);
+	transition: all .5s;
+}
+
+#clock-container.shown {
+	transform: translateY(0);
+}
+
+#clock-icon {
 	color: #fff;
+}
+
+/* Friends List */
+.friends-list-container {
+	position: fixed; 
+	right: 0;
+	top: 73px;
+	background-color: #eefefe;
+	padding: 10px;
+	margin-bottom: 5px;
+}
+
+.friends-list {
+	max-height: calc(100vh - 83px);
+	max-width: 174px;
+	overflow-y: scroll;
+}
+
+.friends-list::-webkit-scrollbar {
+	display: none;
+}
+
+.friends-list > li {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	border: 1px solid #4ECDC4;
+	border-radius: 3px;
+	padding: 5px 10px;
+	background-color: #fff;
+}
+
+.friends-list > li:last-child {
+	margin-bottom: 0;
+}
+
+.friends-list img {
+	width: 40px;
+	border-radius: 50%;
+	margin-right: 15px;
+
+}
+
+.friend-name {
+	font-size: 16px;
+	font-family: 'Ubuntu', sans-serif;
+	color: var(--dark);
+	white-space: nowrap;
+	overflow: hidden; 
+	text-overflow: ellipsis;
+	padding-right: 10px;
+}
+
+.friend-status {
+	margin-left: auto;
+	padding-right: 10px;
+	width: 10px;
+	height: 10px;
+	background-color: red;
+	border-radius: 50%;
+}
+
+.friend-status.active {
+	background-color: green;
+}
+
+
+/*Responsiv pe mobil/ipad Media@*/
+
+@media(max-width: 1360px) {
+	.friends-list-container{
+		display: none;
+	}
+}
+
+@media(max-width: 1024px) {
+	.oarecare {
+		display: none;
+	}
+	aside {
+		margin-left: 15px;
+	}
+}
+
+@media(max-width: 767px) {
+	.container {
+		flex-direction: column;
+	}
+	.posts-page {
+		padding-top: 140px;
+	}
+	aside {
+		margin-right: 15px;
+		margin-bottom: 10px;
+	}
+	nav .left a {
+		flex: 3;
+	}
+	nav .left form {
+		flex: 9;
+	}
+	nav .left {
+		margin-bottom: 10px;
+	}
+	.account > li {
+		flex: 1;
+		text-align: center;
+	}
+	.account {
+		display: flex;
+	}
+	.dropdown, .comments .dropdown {
+		position: fixed;
+		top: 115px;
+		left: 0;
+		right: 0;
+		width: auto;
+	}
+	.account .badge {
+		right: 15px;
+	}
 }

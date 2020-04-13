@@ -1,49 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-	<meta charset="UTF-8">
+	<title>Posts Page</title>
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Kelly+Slab&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/posts.css">
-
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
-	<script src="https://kit.fontawesome.com/0b9bb96ec6.js" crossorigin="anonymous"></script>
-	<script defer type="text/javascript" src="./libraries/slick/slick.min.js"></script>
-  <script defer src="./js/posts.js"></script>
-
-  <!-- Events component -->
-  <link rel="stylesheet" href="components/events/events.css">
-  <script defer src="./components/events/events.js"></script>
-
-  <!-- Commercials component -->
-  <link rel="stylesheet" href="components/commercials/commercials.css">
-  <script defer src="./components/commercials/commercials.js"></script>
-
-  <!-- Clock component -->
-  <link rel="stylesheet" href="components/clock/clock.css">
-  <script defer src="./components/clock/clock.js"></script>
-
-  <!-- Spinner component -->
-  <link rel="stylesheet" href="components/spinner/spinner.css">
-  <script defer src="./components/spinner/spinner.js"></script>
-
-  <!-- Suggested friends component -->
-  <link rel="stylesheet" href="components/suggested-friends/suggested-friends.css">
-  <script defer src="./components/suggested-friends/suggested-friends.js"></script>
-
-  <!-- Update status components -->
-  <link rel="stylesheet" href="components/update-status/newPost.css">
-  <script defer src="./components/update-status/newPost.js"></script>
 </head>
-
 <body class="posts-page">
-	<!-- start spinner -->
+
+		<!-- start spinner -->
 	<div class="spinner-container">
 		<div class="spinner">
 			<span></span>
@@ -53,66 +20,34 @@
 	</div>
 	<!-- end spinner -->
 
-	<!-- Modal Section -->
-<div class="bg-modal">
-    <div class="modal-content">
-      <div>
-          <img src='img/profile.jpg' alt='profile image'>
-          <span class="nameModal">Dave Chappelle</span>
-      </div>
-      <div class="close">+</div>
-        <div class="statusModal">
-            <textarea rows="5" col="30" id="bodyModal"  placeholder="What's on your mind,Chappelle?"></textarea>
-            <input type="button" id="addModal" value="Post"/>
-        </div>
-        <div class="modalIcons">
-          <div class="mIcon1">
-              <i class="fas fa-photo-video"><span> Photo/Video</span></i>
-          </div>
-          <div class="mIcon2">
-              <i class="fas fa-user-tag"><span> Tag friends</span></i>
-          </div>
-          <div class="mIcon3">
-              <i class="fas fa-map-marker-alt"><span> Check In</span></i>
-          </div>
-        </div>
-    </div>
-  </div>
-<!-- End of Modal Section -->
 
 	<!-- Clock-bar -->
 	<div id="clock-container">22:22:22</div>
 	<!-- end clock bar -->
-	
+
+
 	<nav>
 		<div class="container">
 			<div class="left">
 				<a href="posts.html">
 					<i class="fab fa-grav"></i>
 				</a>
-				<form action="" method="get">
+				<span id="greeting"></span>
+				<!-- Am adaugat o clasa la foruml pentru search -->
+				<form action="" method="get" class="search-form">
 					<input type="search" q="term" placeholder="Search...">
-					<button type="submit">
+					<button type="submit" class="search-icon">
 						<i class="fas fa-search"></i>
 					</button>
 				</form>
 			</div>
 			<div class="right">
-
 				<ul class="account">
 					<!-- clock icon -->
 					<li id="clock-icon"><i class="fas fa-clock"></i></a></li>
 					<!-- end icon clock -->
-					<li>
-						<a href="#">
-							<i class="fas fa-bell"></i>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i class="fas fa-user"></i>
-						</a>
-					</li>
+					<li><a href="#"><i class="fas fa-bell"></i></a></li>
+					<li><a href="#"><i class="fas fa-user"></i></a></li>
 					<li class="comments">
 						<a href="#">
 							<i class="fas fa-comments"></i>
@@ -125,7 +60,7 @@
 								<a href="#">
 									<i class="fas fa-comment"></i>
 									<span>
-										<b>Nume Prenume</b>
+										<b>Nume prenume</b>
 										commented
 									</span>
 								</a>
@@ -134,7 +69,7 @@
 								<a href="index.html">
 									<i class="fas fa-comment"></i>
 									<span>
-										<b>Nume Prenume</b>
+										<b>Nume prenume</b>
 										commented
 									</span>
 								</a>
@@ -160,248 +95,87 @@
 								</a>
 							</li>
 						</ul>
-
-
 					</li>
 				</ul>
-
-
 			</div>
 		</div>
 	</nav>
+
 	<div class="container">
 		<aside>
 			<div class="sticky">
 				<div class="profile">
-					<img src="img/profile.jpg" alt="Nume Prenume">
-					<h3>Nume Prenume</h3>
+					<img src="img/profile.jpg" alt="">
+					<h3>Michelle Monaghan</h3>
 					<span>Web Developer</span>
 				</div>
-
 				<div class="events">
 					<h4>Calendar</h4>
+					<ul>
+						<li>
+							<a href="#">
+								<i class="fas fa-calendar-check"></i>
+								<div>
+									<span>Eveniment</span>
+									<span>26/01/2020</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="far fa-calendar-check"></i>
+								<div>
+									<span>Eveniment</span>
+									<span>27/01/2020</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fas fa-calendar"></i>
+								<div>
+									<span>Eveniment</span>
+									<span>28/01/2020</span>
+								</div>
+							</a>
+						</li>
+					</ul>
 				</div>
 			</div>
-
-
 		</aside>
+
 		<main>
-
-      <!-- start article -->
-      <article>
-		  <!-- Input Updat Status -->
-		  <div class="status">
-				<input type="search" id="bodyText"  placeholder="What's on your mind,Chappelle?"></input>
-				<input type="button" id="addComment" value="Post"/>
-				</div>
-			  <div id="containerStatus"></div>
-		  <!-- End Input Updat Status -->
-      	<header>
-      		<img src="img/profile.jpg" alt="Nume Prenume">
-					<div>
-						<span>Nume Prenume</span>
-						<span>Web Developer</span>
-					</div>
-      	</header>
-				<div class="content">
-					<img src="http://placehold.it/800x300" alt="">
-				</div>
-				<footer>
-					<ul class="actions">
-						<li>
-							<a href="#">
-								<i class="far fa-heart"></i>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<i class="fas fa-comment-medical"></i>
-								<!-- deschide input de comment -->
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<i class="fas fa-retweet"></i>
-							</a>
-						</li>
-					</ul>
-					<form>
-						<textarea placeholder="Say something..."></textarea>
-					</form>
-					<div class="comments">
-						<div class="single-comment">
-							<img src="img/profile.jpg" style="max-width: 100%;" alt="">
-							<p>Faina postarea</p>
-						</div>
-						<div class="single-comment">
-							<img src="img/profile.jpg" style="max-width: 100%;" alt="">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti accusamus voluptas neque repellendus numquam officiis nemo unde saepe, similique, ab earum possimus? Voluptate optio unde temporibus, placeat odit repudiandae explicabo!</p>
-						</div>
-					</div>
-				</footer>
-      </article>
-      <!-- end article -->
-      <!-- start article -->
-      <article>
-      	<header>
-      		<img src="img/profile.jpg" alt="Nume Prenume">
-					<div>
-						<span>Nume Prenume</span>
-						<span>Web Developer</span>
-					</div>
-      	</header>
-				<div class="content">
-					<p>Am fost in concediu</p>
-					<video controls autoplay muted>
-						<source src="video/video.mp4" type="video/mp4">
-					</video>
-				</div>
-				<footer>
-					<ul class="actions">
-						<li>
-							<a href="#">
-								<i class="far fa-heart"></i>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<i class="fas fa-comment-medical"></i>
-								<!-- deschide input de comment -->
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<i class="fas fa-retweet"></i>
-							</a>
-						</li>
-					</ul>
-					<form>
-						<textarea placeholder="Say something..."></textarea>
-					</form>
-					<div class="comments">
-						<div class="single-comment">
-							<img src="img/profile.jpg" style="max-width: 100%;" alt="">
-							<p>Faina postarea</p>
-						</div>
-						<div class="single-comment">
-							<img src="img/profile.jpg" style="max-width: 100%;" alt="">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti accusamus voluptas neque repellendus numquam officiis nemo unde saepe, similique, ab earum possimus? Voluptate optio unde temporibus, placeat odit repudiandae explicabo!</p>
-						</div>
-					</div>
-				</footer>
-      </article>
-      <!-- end article -->
-      <!-- start article -->
-      <article>
-      	<header>
-      		<img src="img/profile.jpg" alt="Nume Prenume">
-					<div>
-						<span>Nume Prenume</span>
-						<span>Web Developer</span>
-					</div>
-      	</header>
-				<div class="content">
-					<p>Stie cineva de placehold.it ?</p>
-					<img src="http://placehold.it/800x300" alt="">
-				</div>
-				<footer>
-					<ul class="actions">
-						<li>
-							<a href="#">
-								<i class="far fa-heart"></i>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<i class="fas fa-comment-medical"></i>
-								<!-- deschide input de comment -->
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<i class="fas fa-retweet"></i>
-							</a>
-						</li>
-					</ul>
-					<form>
-						<textarea placeholder="Say something..."></textarea>
-					</form>
-					<div class="comments">
-						<div class="single-comment">
-							<img src="img/profile.jpg" style="max-width: 100%;" alt="">
-							<p>Faina postarea</p>
-						</div>
-						<div class="single-comment">
-							<img src="img/profile.jpg" style="max-width: 100%;" alt="">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti accusamus voluptas neque repellendus numquam officiis nemo unde saepe, similique, ab earum possimus? Voluptate optio unde temporibus, placeat odit repudiandae explicabo!</p>
-						</div>
-					</div>
-				</footer>
-      </article>
-      <!-- end article -->
-      <!-- start article -->
-      <article>
-      	<header>
-      		<img src="img/profile.jpg" alt="Nume Prenume">
-					<div>
-						<span>Nume Prenume</span>
-						<span>Web Developer</span>
-					</div>
-      	</header>
-				<div class="content">
-					<img src="http://placehold.it/800x300" alt="">
-					<img src="http://placehold.it/800x300" alt="">
-					<img src="http://placehold.it/800x300" alt="">
-					<img src="http://placehold.it/800x300" alt="">
-				</div>
-				<footer>
-					<ul class="actions">
-						<li>
-							<a href="#">
-								<i class="far fa-heart"></i>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<i class="fas fa-comment-medical"></i>
-								<!-- deschide input de comment -->
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<i class="fas fa-retweet"></i>
-							</a>
-						</li>
-					</ul>
-					<form>
-						<textarea placeholder="Say something..."></textarea>
-					</form>
-					<div class="comments">
-						<div class="single-comment">
-							<img src="img/profile.jpg" style="max-width: 100%;" alt="">
-							<p>Faina postarea</p>
-						</div>
-						<div class="single-comment">
-							<img src="img/profile.jpg" style="max-width: 100%;" alt="">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti accusamus voluptas neque repellendus numquam officiis nemo unde saepe, similique, ab earum possimus? Voluptate optio unde temporibus, placeat odit repudiandae explicabo!</p>
-						</div>
-					</div>
-				</footer>
-      </article>
-      <!-- end article -->
-
+			<!-- Generated with posts object -->
 		</main>
-		</main>
-		<aside class="oarecare">
-			<div class="sticky rightside">
-				<h4>Sponsored</h4>
-			</div>
-
-		</aside>
-	</div>
 
 
+			<aside class="oarecare">
+				<div class="sticky">
+					<h4>Sponsored</h4>
+					<a href="#" target="_blank">
+						<img src="img/sorry.png" alt="I hate this">
+					</a>
+				</div>
+			</aside>
+		</div>
 
-</body>
+		<!-- friends list -->
+		<div class="friends-list-container">
+			<ul class="friends-list">
+				<!-- html-ul sub forma de string generat in javascript -->
+			</ul>
+		</div>
+		<!-- end friends list -->
 
-</html>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+		<script src="https://kit.fontawesome.com/a68f0f29b9.js" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="./js/spinner.js"></script>
+		<script type="text/javascript" src="./js/clock.js"></script>
+		<script type="text/javascript" src="./js/friends.js"></script>
+		<script type="text/javascript" src="./js/FriendList.js"></script>
+		<script type="text/javascript" src="./js/posts.js"></script>
+		<script type="text/javascript" src="./js/search.js"></script>
+
+	</body>
+	</html>
